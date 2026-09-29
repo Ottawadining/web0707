@@ -158,6 +158,7 @@ nav.cats{
 .cat-pill:hover{transform:translateY(-2px)}
 .cat-pill.active{background:var(--ink);color:var(--cream)}
 .cat-pill .e{font-size:18px}
+.cat-pill.page{background:var(--yellow)}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;overflow:hidden;border-bottom:3px solid var(--ink)}
@@ -389,7 +390,9 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 40px}
   .grid,.seasons,.know,.big5{grid-template-columns:1fr}
   .big5 .b:nth-child(5){grid-column:span 1}
   .foot{grid-template-columns:1fr}
-  .sq{font-size:11px;padding:4px}
+  .bingo-wrap{grid-template-columns:minmax(0,1fr)}
+  .bingo{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;padding:10px}
+  .sq{font-size:11px;padding:4px;min-width:0;overflow-wrap:anywhere}
   .sq .se{font-size:20px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -417,6 +420,8 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 40px}
 <nav class="cats" aria-label="Categories">
   <div class="cats-scroll">
     <a class="cat-pill" href="#must-do"><span class="e">⭐</span>Top 5</a>
+    <a class="cat-pill page" href="one-day-in-ottawa.html"><span class="e">⏰</span>One Day in Ottawa</a>
+    <a class="cat-pill page" href="where-to-eat-in-ottawa.html"><span class="e">🏆</span>Best Restaurants</a>
     <a class="cat-pill" href="#eat"><span class="e">🍽️</span>Eat &amp; Drink</a>
     <a class="cat-pill" href="#sights"><span class="e">🏛️</span>Sights</a>
     <a class="cat-pill" href="#museums"><span class="e">🦕</span>Museums</a>
@@ -440,7 +445,8 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 40px}
     <p class="lead">Shh, don't tell Toronto. Here are the things you absolutely have to do in Canada's capital, from world-class museums to fried dough shaped like a rodent's tail.</p>
     <div class="hero-actions">
       <a href="#must-do" class="btn btn-red">See the Top 5 →</a>
-      <a href="#eat" class="btn btn-white">🍽️ Where to eat</a>
+      <a href="one-day-in-ottawa.html" class="btn btn-white">⏰ One day in Ottawa</a>
+      <a href="where-to-eat-in-ottawa.html" class="btn btn-white">🍽️ Where to eat</a>
     </div>
   </div>
   <div class="hero-sticker" aria-hidden="true">100% more fun than you expected</div>
@@ -570,6 +576,9 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 40px}
           <div class="tags"><span class="tag">19+</span><span class="tag">Local</span></div>
         </div>
       </article>
+    </div>
+    <div style="margin-top:34px;text-align:center">
+      <a href="where-to-eat-in-ottawa.html" class="btn btn-red">🏆 See our favourite Ottawa restaurants →</a>
     </div>
   </div>
 </section>
@@ -1013,6 +1022,7 @@ footer{background:var(--ink);color:var(--cream);padding:60px 0 40px}
         <h4>Explore</h4>
         <ul>
           <li><a href="#must-do">The Big Five</a></li>
+          <li><a href="where-to-eat-in-ottawa.html">Where to eat</a></li>
           <li><a href="#eat">Eat &amp; Drink</a></li>
           <li><a href="#sights">Sights</a></li>
           <li><a href="#museums">Museums</a></li>
